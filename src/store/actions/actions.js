@@ -5,8 +5,39 @@ export const SUBTRACT = "SUBTRACT";
 export const STORE_RESULT = "STORE_RESULT";
 export const DELETE_RESULT = "DELETE_RESULT";
 
+//This functions must be named with using camelCase names instead of all capital letters
 export const increment = () => {
   return {
     type: INCREMENT,
+  };
+};
+
+export const decrement = () => {
+  return {
+    type: DECREMENT,
+  };
+};
+export const add = (value) => {
+  return {
+    type: ADD,
+    val: value,
+  };
+};
+export const subtract = (value) => {
+  return {
+    type: SUBTRACT,
+    val: value,
+  };
+};
+export const storeResult = (value) => {
+  return {
+    type: STORE_RESULT,
+    result: value,
+  };
+};
+export const deleteResult = (value) => {
+  return {
+    type: DELETE_RESULT,
+    resultElId: value,
   };
 };
